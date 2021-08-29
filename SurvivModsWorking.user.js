@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Surviv.io Mods by VN BPM
 // @namespace    https://github.com/iBLiSSIN
-// @version      2.0
+// @version      2.1
 // @description  Original is by dog
 // @author       VN BPM
 // @match        *://surviv.io/*
@@ -50,13 +50,13 @@ if(typeof window.webpackJsonp === 'function') {
 
 Object.keys(shits).forEach(function(key2) {
     if(key2.match(/tree/g)) {
-        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/tree%20modded%20alpha.png"
+        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/tree.png"
     } else if(key2.match(/bush/g)) {
-        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/b%E1%BB%A5i%20c%C3%A2y%20g%E1%BB%91c%20(1).png"
+        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/bush.png"
     } else if(key2.match(/stone/g)) {
-        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/t%E1%BA%A3ng%20%C4%91%C3%A1%20surviv%20modded.png"
+        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/stone.png"
     } else if(key2.match(/barrel/g)) {
-        shits[key2].img.sprite = "https://static.wikia.nocookie.net/survivio/images/7/73/A_campfire.png"
+        shits[key2].img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/barrel.png"
     }
 })
 })();
