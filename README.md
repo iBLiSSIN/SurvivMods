@@ -3,4 +3,4 @@ Mods for surviv.io
 
 v2.0 is testing, will coming soon for you!!!
 
-# This is my first simple js file, so if have error, create a issues
+# Note: this mods is not work if you enable any Survivio Hack/Cheat
