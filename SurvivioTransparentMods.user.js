@@ -51,7 +51,7 @@ if(typeof window.webpackJsonp === 'function') {
 Object.keys(ceilings).forEach(function(key) {
     if(ceilings[key].type === "building") {
         for(var ceilImg in ceilings[key].ceiling.imgs) {
-            ceilings[key].ceiling.imgs[ceilImg].sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/lock.png"
+            ceilings[key].ceiling.imgs[ceilImg].sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/lock2.png"
         }
     }
 })
