@@ -69,7 +69,7 @@
  
 (function() {
       'use strict'
-    PIXI.utils.TextureCache["map-barrel-01.img"]="https://static.wikia.nocookie.net/survivio/images/7/73/A_campfire.png"
+    PIXI.utils.TextureCache["map-barrel-01.img"]=PIXI.utils.TextureCache["https://static.wikia.nocookie.net/survivio/images/7/73/A_campfire.png"]
     PIXI.utils.TextureCache["loot-weapon-mp5.img"]=PIXI.utils.TextureCache["loot-weapon-m9.img"]
     PIXI.utils.TextureCache["loot-weapon-mac10.img"]=PIXI.utils.TextureCache["loot-weapon-m9.img"]
     PIXI.utils.TextureCache["loot-weapon-ump9.img"]=PIXI.utils.TextureCache["loot-weapon-m9.img"]
