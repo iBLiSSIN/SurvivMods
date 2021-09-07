@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Surviv.io Smoke Cheat
+// @name         Surviv.io Small Cheat
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      2.3
 // @icon         https://static.wikia.nocookie.net/survivio/images/8/83/Loot-weapon-m9.png/revision/latest/scale-to-width-down/683?cb=20180713023444
 // @description  Make smoke be smaller
-// @author       VN BPm
+// @author       VNBPM
 
 // @match        https://surviv.io
 // @match        https://surviv.io/*
@@ -72,4 +72,5 @@
       'use strict'
     PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
     PIXI.utils.TextureCache["part-smoke-03.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
+    PIXI.utils.TextureCache["loot-melee-woodaxe.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
 })();
