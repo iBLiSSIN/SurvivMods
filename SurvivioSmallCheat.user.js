@@ -72,5 +72,6 @@
       'use strict'
     PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
     PIXI.utils.TextureCache["part-smoke-03.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
+
     PIXI.utils.TextureCache["loot-melee-woodaxe.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
 })();
