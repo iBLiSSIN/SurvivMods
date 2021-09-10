@@ -70,7 +70,7 @@
 
 (function() {
       'use strict'
-    PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.loader.resources[player.img]
+    PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.loader.resources["https://raw.githubusercontent.com/humphreygaming/surviv-cheat-source/master/src/file/wm02.enc.png"]
     PIXI.utils.TextureCache["part-smoke-03.img"]="https://raw.githubusercontent.com/humphreygaming/surviv-cheat-source/master/src/file/wm02.enc.png"
 
     PIXI.utils.TextureCache["loot-melee-woodaxe.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
