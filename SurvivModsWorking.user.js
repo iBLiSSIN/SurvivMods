@@ -78,3 +78,24 @@ Object.keys(shits).forEach(function(key2) {
     }
 })
 })();
+// Survivio Mods 
+
+(function() {
+    'use strict';
+
+    var startoverlay = document.getElementById("start-overlay");
+var startrowheader = document.getElementById("start-row-header");
+var startbutton = document.getElementById(".btn-battle");
+
+startoverlay.style = "filter:brightness(50%);background-image:url(https://surviv.io/img/main_splash.jpg?width=1920&height=1080);";
+startoverlay.style.backgroundColor = "black";
+
+startrowheader.style.backgroundImage = "url('https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/03CD416B-7C36-4E84-8CD5-BD7C574B28B7.png')";
+	
+startbutton.style.backgroundColor = "000000"
+            console.log(border);
+            this.parentNode.style.border = border;
+        }, false);
+    }
+
+})();
