@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Surviv.io Small Cheat
 // @namespace    http://tampermonkey.net/
-// @version      2.6
+// @version      2.7
 // @icon         https://static.wikia.nocookie.net/survivio/images/8/83/Loot-weapon-m9.png/revision/latest/scale-to-width-down/683?cb=20180713023444
-// @description  thêm một số thứ linh tinh cho vui :))
+// @description  thêm tự động cập nhập
 // @author       VNBPM
  
 // @match        https://surviv.io
@@ -74,8 +74,6 @@
     PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
     PIXI.utils.TextureCache["map-barrel-01.img"]=PIXI.utils.TextureCache["campfire.img"]
  
-    PIXI.utils.TextureCache["proj-smoke-nopin-nolever.img"]=PIXI.utils.TextureCache["donut.img"]
- 
     PIXI.utils.TextureCache["loot-melee-woodaxe.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
     PIXI.utils.TextureCache["loot-melee-woodaxe-bloody.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
     PIXI.utils.TextureCache["loot-melee-machete-taiga.img"]=PIXI.utils.TextureCache["face-poo.img"]
@@ -83,6 +81,8 @@
     PIXI.utils.TextureCache["proj-frag-nopin-nolever-01.img"]=PIXI.utils.TextureCache["pineapple.img"]
     PIXI.utils.TextureCache["proj-frag-nopin-nolever-01.img"]=PIXI.utils.TextureCache["pineapple.img"]
     PIXI.utils.TextureCache["proj-mirv-nopin-nolever.img"]=PIXI.utils.TextureCache["baguette.img"]
+    PIXI.utils.TextureCache["proj-mirv-mini-01.img"]=PIXI.utils.TextureCache["acorn.img"]
+    PIXI.utils.TextureCache["proj-mirv-mini-02.img"]=PIXI.utils.TextureCache["acorn.img"]
     PIXI.utils.TextureCache["proj-smoke-nopin-nolever.img"]=PIXI.utils.TextureCache["donut.img"]
  
     PIXI.utils.TextureCache["gun-mp220-01.img"]=PIXI.utils.TextureCache["map-toilet-04.img"]
