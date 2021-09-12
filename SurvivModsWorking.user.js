@@ -74,7 +74,7 @@ Object.keys(shits).forEach(function(key2) {
         shits.stone_03b.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03fimg.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
     } else if(key2.match(/barrel/g)) {
-        shits[key2].img.sprite = "https://static.wikia.nocookie.net/survivio/images/7/73/A_campfire.png"
+        shits.barrel_01.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/barrel3.png"
     }
 })
 })();
