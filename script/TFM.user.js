@@ -87,6 +87,8 @@ document.getElementById("sticky-footer").remove(); // ad
  
 else{
 document.getElementById("background").style = "filter:brightness(100%);background-image:url(https://wallpaperaccess.com/full/5346046.jpg?width=1920&height=1080);";
+
+document.getElementById("start-row-header").style = "display:none;";
 }
 .gwd-page-container{
 display:none;
