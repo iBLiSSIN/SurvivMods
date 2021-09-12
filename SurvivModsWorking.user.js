@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Surviv.io trees and bushes remover
+// @name         Surviv.io Mods By VNBPM
 // @namespace    https://github.com/iblissin
 // @version      2.1
 // @description  Cuts trees and makes the bushes really small, exposing any players who hide under them or is near them.
@@ -73,8 +73,6 @@ Object.keys(shits).forEach(function(key2) {
         shits.stone_03x.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03b.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03fimg.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
-    } else if(key2.match(/barrel/g)) {
-        shits.barrel_01.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/barrel3.png"
     }
 })
 })();
