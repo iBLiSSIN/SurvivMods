@@ -88,7 +88,7 @@ document.getElementById("sticky-footer").remove(); // ad
 else{
 document.getElementById("background").style = "filter:brightness(100%);background-image:url(https://wallpaperaccess.com/full/5346046.jpg?width=1920&height=1080);";
 
-document.getElementById("start-row-header").style = "display:none;";
+document.getElementById("start-row-header").style.backgroundImage = "url('https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/03CD416B-7C36-4E84-8CD5-BD7C574B28B7.png')";
 }
 .gwd-page-container{
 display:none;
