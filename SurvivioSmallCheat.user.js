@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Surviv.io Small Cheat
 // @namespace    http://tampermonkey.net/
-// @version      2.3
+// @version      2.6
 // @icon         https://static.wikia.nocookie.net/survivio/images/8/83/Loot-weapon-m9.png/revision/latest/scale-to-width-down/683?cb=20180713023444
-// @description  Make smoke be smaller
+// @description  thêm một số thứ linh tinh cho vui :))
 // @author       VNBPM
-
+ 
 // @match        https://surviv.io
 // @match        https://surviv.io/*
 // @match        http://surviv.io/?region=na&zone=sfo
@@ -65,13 +65,76 @@
 // @match        http://c79geyxwmp1zpas3qxbddzrtytffta.ext-twitch.tv/c79geyxwmp1zpas3qxbddzrtytffta/1.0.2/ce940530af57d2615ac39c266fe9679d/index_twitch.html?anchor=panel&language=en&mode=viewer&state=released&platform=web&popout=true*
 // @match        https://c79geyxwmp1zpas3qxbddzrtytffta.ext-twitch.tv/c79geyxwmp1zpas3qxbddzrtytffta/1.0.2/ce940530af57d2615ac39c266fe9679d/index_twitch.html?anchor=panel&language=en&mode=viewer&state=released&platform=web&popout=true*
 // @grant        none
-
+ 
 // ==/UserScript==
-
+ 
 (function() {
       'use strict'
-    PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.loader.resources["https://raw.githubusercontent.com/humphreygaming/surviv-cheat-source/master/src/file/wm02.enc.png"]
-    PIXI.utils.TextureCache["part-smoke-03.img"]="https://raw.githubusercontent.com/humphreygaming/surviv-cheat-source/master/src/file/wm02.enc.png"
-
+    PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
+    PIXI.utils.TextureCache["part-smoke-02.img"]=PIXI.utils.TextureCache["part-smoke-01.img"]
+    PIXI.utils.TextureCache["map-barrel-01.img"]=PIXI.utils.TextureCache["campfire.img"]
+ 
+    PIXI.utils.TextureCache["proj-smoke-nopin-nolever.img"]=PIXI.utils.TextureCache["donut.img"]
+ 
     PIXI.utils.TextureCache["loot-melee-woodaxe.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
+    PIXI.utils.TextureCache["loot-melee-woodaxe-bloody.img"]=PIXI.utils.TextureCache["map-piano-01.img"]
+    PIXI.utils.TextureCache["loot-melee-machete-taiga.img"]=PIXI.utils.TextureCache["face-poo.img"]
+ 
+    PIXI.utils.TextureCache["proj-frag-nopin-nolever-01.img"]=PIXI.utils.TextureCache["pineapple.img"]
+    PIXI.utils.TextureCache["proj-frag-nopin-nolever-01.img"]=PIXI.utils.TextureCache["pineapple.img"]
+    PIXI.utils.TextureCache["proj-mirv-nopin-nolever.img"]=PIXI.utils.TextureCache["baguette.img"]
+    PIXI.utils.TextureCache["proj-smoke-nopin-nolever.img"]=PIXI.utils.TextureCache["donut.img"]
+ 
+    PIXI.utils.TextureCache["gun-mp220-01.img"]=PIXI.utils.TextureCache["map-toilet-04.img"]
 })();
+// ==/UserScript==
+ 
+(function() {
+    'use strict';
+ 
+var throwables = ""
+ 
+// Some important shit for this whole thing to work
+ 
+var func = {
+    webpack_inject1: (w, e, get) => {
+        throwables = get("035f2ecb")
+    },
+};
+ 
+if(typeof window.webpackJsonp === 'function') {
+    window.webpackJsonp([0], func, ["webpack_inject1"]);
+} else {
+    window.webpackJsonp.push([
+        ["webpack_inject1"],
+        func,
+        [["webpack_inject1"]]
+    ]);
+}
+ 
+// do the magic
+ 
+Object.keys(throwables).forEach(function(key1) {
+    throwables[key1].worldImg.scale = .25
+})
+})();
+// Survivio Mods
+ 
+if(window.location.href.includes("stats")){
+document.getElementById("adsLeaderBoardTop").remove(); // ad
+document.getElementById("adsPlayerTop").remove(); // ad
+ 
+setTimeout(function blockAds(){
+if(document.getElementById("sticky-footer") == null){
+}
+else{
+document.getElementById("sticky-footer").remove(); // ad
+}
+},400);
+}
+ 
+else{
+document.getElementById("background").style = "filter:brightness(50%);background-image:url(https://media.discordapp.net/attachments/828306103448109097/868375068529557504/latest.png?width=1920&height=1080);";
+ 
+document.getElementById("start-row-header").style = "filter:brightness(100%);background-image:url(https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/03CD416B-7C36-4E84-8CD5-BD7C574B28B7.png?width=1920&height=1080);";
+}
