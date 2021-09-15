@@ -68,11 +68,13 @@ Object.keys(shits).forEach(function(key2) {
         shits.stone_01.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/stone.png"
         shits.stone_01cb.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/stone.png"
         shits.stone_01x.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/stone.png"
+        shits.stone_01sv.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img/stone.png"
         shits.stone_03.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03cb.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03x.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
         shits.stone_03b.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
-        shits.stone_03fimg.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
+        shits.stone_03f.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
+        shits.stone_03sv.img.sprite = "https://raw.githubusercontent.com/iBLiSSIN/SurvivMods/main/img%20for%20change/big%20stone%202.png"
     }
 })
 })();
