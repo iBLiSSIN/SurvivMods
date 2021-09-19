@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Surviv.io 2021 - Dark theme (Finished)
+// @name         Surviv.io - Dark Theme (2021)
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.7.4
 // @icon         https://media.discordapp.net/attachments/828306103448109097/871941998393831454/svgviewer-png-output_1.png
-// @description  ếch
-// @author       sk
+// @description  The original script was not owned by me, i just remake it for 2021.
+// @author       Samer Kizi#8293
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_addValue
@@ -86,11 +86,9 @@ document.getElementById("sticky-footer").remove(); // ad
 }
  
 else{
-document.getElementById("background").style = "filter:brightness(50%);background-image:url(https://media.discordapp.net/attachments/828306103448109097/868375068529557504/latest.png?width=1920&height=1080);";
- 
-document.getElementById("start-top-left").style = "display:none;";
+document.getElementById("background").style = "filter:brightness(100%);background-image:url(https://media.discordapp.net/attachments/882591502574968863/884625002396266496/Main_splash_River.png?width=1920&height=1080);";
 document.getElementById("start-menu").style = "display:none;";
-document.getElementById("free-gp-offer").style = "display:none;";
+document.getElementById("free-gp-offer").style = "display:none;opacity:0;";
 document.getElementById("missions-name").style = "background-image:none";
 document.getElementById("missions-wrapper").style = "margin-block:155px;";
 document.getElementById("social-share-block").style = "display:none;";
@@ -98,6 +96,7 @@ document.getElementById("pass-block").style = "background-color:rgb(0 0 0 / 20%)
 document.getElementById("start-row-header").style = "display:none;";
 document.getElementById("btn-support").style = "display:none;";
 document.getElementById("modal-body-warning").style = "background:rgb(255 255 255 / 0%);";
+document.getElementById("start-top-left").style = "display:none;";
  
 document.getElementById("prestige-loading").style = "color:rgb(0 0 0 / 70%);";
 document.getElementById("start-row-top").style = "margin-left:250px;margin-block:200px;";
@@ -114,9 +113,11 @@ document.getElementById("team-hide-url").style = "margin-inline:5000px";
 document.getElementById("team-code").style = "width:0px;font-size:0px;";
 document.getElementById("team-link-input").style = "width:550px;border-radius:0px;margin-left:-195px;color:rgb(255 255 255 / 70%);";
 document.getElementById("msg-wait-reason").style = "margin-bottom:47px;";
+ 
 document.getElementById("ui-spectate-video-ad-container-desktop").style = "display:none;margin-block:-5000px;opacity:0;";
 document.getElementById("ui-spectate-ad-container-desktop").style = "display:none;margin-block:-5000px;opacity:0;";
 document.getElementById("pass-buy-btn-spectate").style = "display:none;";
+document.getElementById("ui-stats-ad-container-desktop").style = "display:none;";
  
 document.getElementById("modal-customize-cat-title").style = "opacity:0;";
 document.getElementById("modal-customize-sort").style = "display:none;";
@@ -135,8 +136,13 @@ document.getElementById("market-change-sort").style = "background-color:#221E23;
 document.getElementById("market-change-mode").style = "background-color:#221E23;box-shadow:none;border-bottom:2px solid #010003;border-radius:0px;";
  
 document.getElementById("btn-help").style = "background-color:#221E23;box-shadow:none;border-bottom:2px solid #010003;border-radius:0px;";
-document.getElementById("btn-news").style = "background-color:#221E23;box-shadow:none;border-bottom:2px solid #010003;border-radius:0px;";
+document.getElementById("btn-news").style = "background-color:#221E23;box-shadow:none;border-bottom:2px solid #010003;border-radius:0px;margin-block:2.5px;";
 document.getElementById("news-block").style = "border-radius:0px;";
+document.getElementById("open-arena-button").style = "margin-inline:-20px;";
+ 
+document.getElementById("modal-prestige-body").style = "background:rgba(250,250,250,0.3);";
+document.getElementById("modal-battle-window").style = "background:rgba(250,250,250,0);";
+document.getElementById("modal-prestige-wrapper").style = "margin-inline:-55px;";
  
 document.getElementById("btn-game-fullscreen").style = "box-shadow:none;border-radius:0px;background:rgba(250,250,250,0.3);border-bottom:none;background-image:url(../img/gui/minimize.svg);background-size:34px;background-position:4px 2px;background-repeat:no-repeat;";
 document.getElementById("btn-game-sound").style = "box-shadow:none;border-radius:0px;background:rgba(250,250,250,0.3);border-bottom:none;background-image:url(../img/gui/audio-on.svg);background-size:34px;background-position:4px 2px;background-repeat:no-repeat;";
@@ -144,9 +150,86 @@ document.getElementById("btn-game-quit").style = "box-shadow:none;border-radius:
 document.getElementById("btn-game-resume").style = "box-shadow:none;border-radius:0px;background:rgba(250,250,250,0.3);border-bottom:none;background-image:url(../img/gui/resume.svg);background-size:34px;background-position:4px 2px;background-repeat:no-repeat;";
 document.getElementById("btn-game-settings").style = "border-radius:0px;";
 document.getElementById("btn-game-keybinds").style = "border-radius:0px;";
+ 
+document.getElementById("ui-stats-contents-inner").style = "background-color:rgba(0,0,0,0);";
+document.getElementById("ui-stats-header").style = "opacity:0;";
+ 
 }
  
 GM_addStyle(`
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-game-summary-button.selected, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-create-button.selected, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-spectate-button.selected, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-battle-button.selected{
+background-color:rgba(250,250,250,0.3);
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-battle-button{
+background-image:none;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-game-summary-button, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-create-button, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-spectate-button, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-battle-button{
+background:#221E23;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-header #prestige-game-summary-button{
+background-image:none;
+ 
+}
+.account-buttons-wrapper{
+right:18px;
+}
+.account-name-user{
+margin-left:15px;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner{
+background:rgba(250,250,250,0);
+border-radius:0px;
+box-shadow:none;
+ 
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .input-group .battle-summary-entry, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .input-group .battle-summary-entry, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .input-group .battle-link-entry, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .input-group .battle-link-entry {
+background:rgba(250,250,250,0.7);
+height:45px;
+color:rgba(0,0,0,0.7);
+font-weight:bolder;
+font-size:17px;
+ 
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .input-group #battle-search-button-2, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .input-group #battle-search-button-2, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .input-group #battle-search-button, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .input-group #battle-search-button {
+height:45px;
+width:45px;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner{
+height:auto;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .battle-mode, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .battle-mode{
+color:white;
+background:#221E23;
+border-radius:0px;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .button-group, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .button-group{
+display:none;
+}
+#modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-summary-window .battle-type, #modal-prestige-arena #modal-prestige-wrapper #modal-prestige-body .modal-prestige-body-inner #modal-battle-window .battle-type{
+color:white;
+background:#221E23;
+border-radius:0px
+}
+.account-details-block{
+height:43px;
+margin-block:2.5px;
+right:10px;
+margin-inline:20px;
+}
+.btn-open-arena{
+font-size:0px;
+background-position:center;
+width:80px;
+}
+.news-toggle {
+font-size:0px;
+background-position:center;
+width:29px;
+}
+.ui-stats-ad-container{
+top:5000px;
+opacity:0;
+}
 #ui-game-tab-keybinds > .btn-keybind-restore{
 box-shadow:none;
 border-radius:0px;
@@ -245,7 +328,7 @@ box-shadow:none;
 border-radius:0px;
 }
 .close-corner{
-display:none;
+display:block;
 }
 #iap-modal .iap-screen .iap-container .iap-limited-offers{
 background:rgba(0,0,0,0.08);
