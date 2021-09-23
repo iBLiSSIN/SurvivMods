@@ -85,6 +85,8 @@
     PIXI.utils.TextureCache["proj-mirv-mini-02.img"]=PIXI.utils.TextureCache["acorn.img"]
     PIXI.utils.TextureCache["proj-smoke-nopin-nolever.img"]=PIXI.utils.TextureCache["donut.img"]
  
+    window.gameVars.Textures.targetTexture = window.PIXI.Texture.fromImage("img/gui/ping-team-coming.svg");
+ 
     PIXI.utils.TextureCache["gun-mp220-01.img"]=PIXI.utils.TextureCache["map-toilet-04.img"]
 })();
 // ==/UserScript==
